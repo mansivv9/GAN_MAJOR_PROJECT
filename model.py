@@ -1,4 +1,4 @@
-# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2023-01-19T08:04:57.361738Z","iopub.execute_input":"2023-01-19T08:04:57.362115Z","iopub.status.idle":"2023-01-19T08:04:57.534911Z","shell.execute_reply.started":"2023-01-19T08:04:57.362085Z","shell.execute_reply":"2023-01-19T08:04:57.533929Z"}}
+# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2023-01-19T08:43:26.065783Z","iopub.execute_input":"2023-01-19T08:43:26.066256Z","iopub.status.idle":"2023-01-19T08:43:26.248804Z","shell.execute_reply.started":"2023-01-19T08:43:26.066201Z","shell.execute_reply":"2023-01-19T08:43:26.247734Z"}}
 import tensorflow as tf
 import tensorlayer as tl
 from tensorlayer.layers import *
@@ -824,7 +824,7 @@ def cnn_encoder(inputs, is_train=True, reuse=False, name='cnnftxt', return_h3=Fa
     gamma_init = tf.random_normal_initializer(1., 0.02)
     df_dim = 64
 
-    with tf.variable_scope(name, reuse=reuse):
+    with tf.compat.v1.variable_scope(name, reuse=reuse):
         tl.layers.set_name_reuse(True)
 
         net_in = InputLayer(inputs, name='/in')
