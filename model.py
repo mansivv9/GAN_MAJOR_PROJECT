@@ -1107,7 +1107,7 @@ def discriminator_txt2img_resnet(input_images, t_txt=None, is_train=True, reuse=
                 padding='SAME', W_init=w_init, b_init=None, name='d_h4_res/conv2d3')
         net = BatchNormLayer(net, #act=lambda x: tl.act.lrelu(x, 0.2),
                 is_train=is_train, gamma_init=gamma_init, name='d_h4_res/batchnorm3')
-        net_h4 = ElementwiseLayer(layer=[net_h3, net], combine_fn=tf.add, name='d_h4/add')
+        net_h4 = ElementwiseLayer([net_h3, net], combine_fn=tf.add, name='d_h4/add')
         net_h4.outputs = tl.act.lrelu(net_h4.outputs, 0.2)
 
         if t_txt is not None:
@@ -1172,7 +1172,7 @@ def z_encoder(input_images, is_train=True, reuse=False):
                 padding='SAME', W_init=w_init, b_init=None, name='d_h4_res/conv2d3')
         net = BatchNormLayer(net, #act=lambda x: tl.act.lrelu(x, 0.2),
                 is_train=is_train, gamma_init=gamma_init, name='d_h4_res/batchnorm3')
-        net_h4 = ElementwiseLayer(layer=[net_h3, net], combine_fn=tf.add, name='d_h4/add')
+        net_h4 = ElementwiseLayer([net_h3, net], combine_fn=tf.add, name='d_h4/add')
         net_h4.outputs = tl.act.lrelu(net_h4.outputs, 0.2)
 
         net_ho = FlattenLayer(net_h4, name='d_ho/flatten')
