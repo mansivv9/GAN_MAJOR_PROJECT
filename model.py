@@ -1010,7 +1010,7 @@ def generator_txt2img_resnet(input_z, t_txt=None, is_train=True, reuse=False, ba
                 padding='SAME', act=None, W_init=w_init, b_init=None, name='g_h1_res/conv2d3')
         net = BatchNormLayer(net, # act=tf.nn.relu,
                 is_train=is_train, gamma_init=gamma_init, name='g_h1_res/batch_norm3')
-        net_h1 = ElementwiseLayer(layer=[net_h0, net], combine_fn=tf.add, name='g_h1_res/add')
+        net_h1 = ElementwiseLayer([net_h0, net], combine_fn=tf.add, name='g_h1_res/add')
         net_h1.outputs = tf.nn.relu(net_h1.outputs)
 
         # Note: you can also use DeConv2d to replace UpSampling2dLayer and Conv2d
