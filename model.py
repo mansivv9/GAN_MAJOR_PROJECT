@@ -827,7 +827,7 @@ def cnn_encoder(inputs, is_train=True, reuse=False, name='cnnftxt', return_h3=Fa
     with tf.compat.v1.variable_scope(name, reuse=reuse):
         tl.layers.set_name_reuse(True)
 
-        net_in = InputLayer(inputs,name='/in')
+        net_in = InputLaye(inputs,name='/in')
         net_h0 = Conv2d(net_in, df_dim, (4, 4), (2, 2), act=lambda x: tl.act.lrelu(x, 0.2),
                 padding='SAME', W_init=w_init, name='cnnf/h0/conv2d')
 
