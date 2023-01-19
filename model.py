@@ -1,29 +1,4 @@
-# %% [code] {"jupyter":{"outputs_hidden":false}}
- [code]
-
-# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2023-01-19T07:33:41.422796Z","iopub.execute_input":"2023-01-19T07:33:41.423295Z","iopub.status.idle":"2023-01-19T07:33:41.453698Z","shell.execute_reply.started":"2023-01-19T07:33:41.423161Z","shell.execute_reply":"2023-01-19T07:33:41.452829Z"}}
-# This Python 3 environment comes with many helpful analytics libraries installed
-# It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python
-# For example, here's several helpful packages to load
-
-import numpy as np # linear algebra
-import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
-
-# Input data files are available in the read-only "../input/" directory
-# For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory
-
-import os
-for dirname, _, filenames in os.walk('/kaggle/input'):
-    for filename in filenames:
-        print(os.path.join(dirname, filename))
-
-# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using "Save & Run All" 
-# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session
-
-# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2023-01-19T07:34:27.447678Z","iopub.execute_input":"2023-01-19T07:34:27.448097Z","iopub.status.idle":"2023-01-19T07:34:40.867235Z","shell.execute_reply.started":"2023-01-19T07:34:27.448063Z","shell.execute_reply":"2023-01-19T07:34:40.865916Z"}}
-
-
-# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2023-01-19T07:34:55.363549Z","iopub.execute_input":"2023-01-19T07:34:55.363947Z","iopub.status.idle":"2023-01-19T07:34:57.311605Z","shell.execute_reply.started":"2023-01-19T07:34:55.363918Z","shell.execute_reply":"2023-01-19T07:34:57.310405Z"}}
+# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2023-01-19T08:04:57.361738Z","iopub.execute_input":"2023-01-19T08:04:57.362115Z","iopub.status.idle":"2023-01-19T08:04:57.534911Z","shell.execute_reply.started":"2023-01-19T08:04:57.362085Z","shell.execute_reply":"2023-01-19T08:04:57.533929Z"}}
 import tensorflow as tf
 import tensorlayer as tl
 from tensorlayer.layers import *
