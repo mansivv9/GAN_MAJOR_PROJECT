@@ -1,4 +1,4 @@
-# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2023-01-19T08:43:26.065783Z","iopub.execute_input":"2023-01-19T08:43:26.066256Z","iopub.status.idle":"2023-01-19T08:43:26.248804Z","shell.execute_reply.started":"2023-01-19T08:43:26.066201Z","shell.execute_reply":"2023-01-19T08:43:26.247734Z"}}
+# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2023-01-19T10:18:10.347276Z","iopub.execute_input":"2023-01-19T10:18:10.347712Z","iopub.status.idle":"2023-01-19T10:18:14.878364Z","shell.execute_reply.started":"2023-01-19T10:18:10.347672Z","shell.execute_reply":"2023-01-19T10:18:14.877245Z"}}
 import tensorflow as tf
 import tensorlayer as tl
 from tensorlayer.layers import *
