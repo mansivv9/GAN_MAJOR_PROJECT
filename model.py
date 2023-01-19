@@ -1035,7 +1035,7 @@ def generator_txt2img_resnet(input_z, t_txt=None, is_train=True, reuse=False, ba
                 padding='SAME', act=None, W_init=w_init, b_init=None, name='g_h3_res/conv2d3')
         net = BatchNormLayer(net, #act=tf.nn.relu,
                 is_train=is_train, gamma_init=gamma_init, name='g_h3_res/batch_norm3')
-        net_h3 = ElementwiseLayer(layer=[net_h2, net], combine_fn=tf.add, name='g_h3/add')
+        net_h3 = ElementwiseLayer([net_h2, net], combine_fn=tf.add, name='g_h3/add')
         net_h3.outputs = tf.nn.relu(net_h3.outputs)
 
         # net_h4 = DeConv2d(net_h3, gf_dim*2, (4, 4), out_size=(s4, s4), strides=(2, 2),
