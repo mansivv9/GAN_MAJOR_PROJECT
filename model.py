@@ -1210,4 +1210,3 @@ def z_encoder(input_images, is_train=True, reuse=False):
     return net_ho
 
 # %% [code] {"execution":{"iopub.status.busy":"2023-01-19T11:10:30.696977Z","iopub.execute_input":"2023-01-19T11:10:30.698076Z","iopub.status.idle":"2023-01-19T11:10:41.093948Z","shell.execute_reply.started":"2023-01-19T11:10:30.698015Z","shell.execute_reply":"2023-01-19T11:10:41.092287Z"}}
-pip show tensorlayer
